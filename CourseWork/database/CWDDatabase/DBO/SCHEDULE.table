@@ -1,0 +1,352 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<table xmlns="http://xmlns.oracle.com/jdeveloper/1112/offlinedb">
+  <ID class="oracle.javatools.db.IdentifierBasedID">
+    <identifier class="java.lang.String">925530b9-7465-4ab1-b6a0-0da2edc1e888</identifier>
+  </ID>
+  <name>SCHEDULE</name>
+  <columns>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">88b8fecf-8d0e-41af-87a2-ba3bfc5edcc7</identifier>
+      </ID>
+      <name>ARRIVAL_DATETIME</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">b34f96e9-3b50-41c2-b722-264297bf9f8d</identifier>
+        </ID>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.Oracle9i</providerClass>
+          <typeName>TIMESTAMP</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">b6996160-82dd-4f85-bc35-a9a0ff405407</identifier>
+      </ID>
+      <name>PLATFORM_CODE</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">421505fb-4cf5-435f-b9e7-e93fa401ce97</identifier>
+        </ID>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">68bea12d-7d0b-42a4-a0a3-031b3a59c9eb</identifier>
+      </ID>
+      <name>TRAIN_CODE</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">127fcea1-f607-4553-8934-337893c717c1</identifier>
+        </ID>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">6b5e0d62-de0a-4ff4-a3f0-6d8447ad31b6</identifier>
+      </ID>
+      <name>CODE</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">ed923900-799a-409a-bdd6-cb604389e7d0</identifier>
+        </ID>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>AUTO_GENERATED_SEQUENCE</key>
+          <value class="oracle.javatools.db.IdentifierBasedID">
+            <name>SCHEDULE_SEQ</name>
+            <identifier class="java.lang.String">56175e4e-083d-40ca-b2a1-89ba952c06e4</identifier>
+            <schemaName>DBO</schemaName>
+            <type>SEQUENCE</type>
+          </value>
+        </entry>
+        <entry>
+          <key>AUTO_GENERATED_SEQUENCE_TRIGGER</key>
+          <value class="oracle.javatools.db.NameBasedID">
+            <name>SCHEDULE_TRG</name>
+            <schemaName>DBO</schemaName>
+            <type>TRIGGER</type>
+          </value>
+        </entry>
+        <entry>
+          <key>ColumnSequenceExpander.ReuseSequence</key>
+          <value class="java.lang.Boolean">false</value>
+        </entry>
+        <entry>
+          <key>ColumnSequenceExpander.TriggerNullCheck</key>
+          <value class="java.lang.Boolean">true</value>
+        </entry>
+      </properties>
+    </column>
+  </columns>
+  <constraints>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">b33e2337-4aae-4297-9a7b-1adbc1687c60</identifier>
+      </ID>
+      <name>SCHEDULE_PLATFORM_FK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>TRAIN_CODE</name>
+          <identifier class="java.lang.String">68bea12d-7d0b-42a4-a0a3-031b3a59c9eb</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>SCHEDULE</name>
+            <identifier class="java.lang.String">925530b9-7465-4ab1-b6a0-0da2edc1e888</identifier>
+            <schemaName>DBO</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <deleteMode>0</deleteMode>
+      <enabled>true</enabled>
+      <referenceID class="oracle.javatools.db.IdentifierBasedID">
+        <name>PLATFORM_PK</name>
+        <identifier class="java.lang.String">0ffeddf9-e569-4eed-bf2e-d67976d09bcb</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>PLATFORM</name>
+          <identifier class="java.lang.String">195dc673-ead7-452a-b994-b574698b327a</identifier>
+          <schemaName>DBO</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">db8db002-9e0e-4f03-ad4a-f1117ec68660</identifier>
+      </ID>
+      <name>SCHEDULE_TRAIN_FK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>TRAIN_CODE</name>
+          <identifier class="java.lang.String">68bea12d-7d0b-42a4-a0a3-031b3a59c9eb</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>SCHEDULE</name>
+            <identifier class="java.lang.String">925530b9-7465-4ab1-b6a0-0da2edc1e888</identifier>
+            <schemaName>DBO</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <deleteMode>0</deleteMode>
+      <enabled>true</enabled>
+      <referenceID class="oracle.javatools.db.IdentifierBasedID">
+        <name>TRAIN_PK</name>
+        <identifier class="java.lang.String">766d9e8a-9773-49a1-b883-292d2782ab0c</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>TRAIN</name>
+          <identifier class="java.lang.String">519eaa73-62d5-416f-a75c-52ae1641d0a3</identifier>
+          <schemaName>DBO</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+    <constraint class="oracle.javatools.db.PKConstraint">
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">d0b88070-e801-4f95-a4ec-cca6c483a22e</identifier>
+      </ID>
+      <name>SCHEDULE_PK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>ARRIVAL_DATETIME</name>
+          <identifier class="java.lang.String">88b8fecf-8d0e-41af-87a2-ba3bfc5edcc7</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>SCHEDULE</name>
+            <identifier class="java.lang.String">925530b9-7465-4ab1-b6a0-0da2edc1e888</identifier>
+            <schemaName>DBO</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <type>COLUMN</type>
+        </columnID>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>PLATFORM_CODE</name>
+          <identifier class="java.lang.String">b6996160-82dd-4f85-bc35-a9a0ff405407</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>SCHEDULE</name>
+            <identifier class="java.lang.String">925530b9-7465-4ab1-b6a0-0da2edc1e888</identifier>
+            <schemaName>DBO</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.IdentifierBasedID">
+        <name>SCHEDULE_PK</name>
+        <identifier class="java.lang.String">9c4ca6e3-9816-4695-a071-5a8865e0a07d</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>SCHEDULE</name>
+          <identifier class="java.lang.String">925530b9-7465-4ab1-b6a0-0da2edc1e888</identifier>
+          <schemaName>DBO</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>DBO</schemaName>
+        <type>INDEX</type>
+      </indexID>
+    </constraint>
+    <constraint class="oracle.javatools.db.UniqueConstraint">
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">781ffb9b-a916-456a-add4-148daf31ffb3</identifier>
+      </ID>
+      <name>SCHEDULE_UK1</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>CODE</name>
+          <identifier class="java.lang.String">6b5e0d62-de0a-4ff4-a3f0-6d8447ad31b6</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>SCHEDULE</name>
+            <identifier class="java.lang.String">925530b9-7465-4ab1-b6a0-0da2edc1e888</identifier>
+            <schemaName>DBO</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.IdentifierBasedID">
+        <name>SCHEDULE_UK1</name>
+        <identifier class="java.lang.String">41c931ff-e6ff-4904-af6e-ae7e9371cb6a</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>SCHEDULE</name>
+          <identifier class="java.lang.String">925530b9-7465-4ab1-b6a0-0da2edc1e888</identifier>
+          <schemaName>DBO</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>DBO</schemaName>
+        <type>INDEX</type>
+      </indexID>
+    </constraint>
+  </constraints>
+  <indexes>
+    <indexe>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">9c4ca6e3-9816-4695-a071-5a8865e0a07d</identifier>
+      </ID>
+      <name>SCHEDULE_PK</name>
+      <columnExpressions>
+        <columnExpression>
+          <ID class="oracle.javatools.db.IdentifierBasedID">
+            <identifier class="java.lang.String">203fcc6c-4985-4eef-8d27-f6fde22d9456</identifier>
+          </ID>
+          <expression class="oracle.javatools.db.sql.ColumnUsage">
+            <ID class="oracle.javatools.db.IdentifierBasedID">
+              <identifier class="java.lang.String">98474d8f-9cc0-4633-9e89-0312b52eabb4</identifier>
+            </ID>
+            <objectID class="oracle.javatools.db.IdentifierBasedID">
+              <name>ARRIVAL_DATETIME</name>
+              <identifier class="java.lang.String">88b8fecf-8d0e-41af-87a2-ba3bfc5edcc7</identifier>
+              <parent class="oracle.javatools.db.IdentifierBasedID">
+                <name>SCHEDULE</name>
+                <identifier class="java.lang.String">925530b9-7465-4ab1-b6a0-0da2edc1e888</identifier>
+                <schemaName>DBO</schemaName>
+                <type>TABLE</type>
+              </parent>
+              <type>COLUMN</type>
+            </objectID>
+            <outerJoin>false</outerJoin>
+            <qualified>true</qualified>
+          </expression>
+          <order>ASC</order>
+        </columnExpression>
+        <columnExpression>
+          <ID class="oracle.javatools.db.IdentifierBasedID">
+            <identifier class="java.lang.String">7e2335fa-428c-4dac-890a-7c0e573d9e8f</identifier>
+          </ID>
+          <expression class="oracle.javatools.db.sql.ColumnUsage">
+            <ID class="oracle.javatools.db.IdentifierBasedID">
+              <identifier class="java.lang.String">84d365e7-4833-4513-a76c-92f8cd1dc8ec</identifier>
+            </ID>
+            <objectID class="oracle.javatools.db.IdentifierBasedID">
+              <name>PLATFORM_CODE</name>
+              <identifier class="java.lang.String">b6996160-82dd-4f85-bc35-a9a0ff405407</identifier>
+              <parent class="oracle.javatools.db.IdentifierBasedID">
+                <name>SCHEDULE</name>
+                <identifier class="java.lang.String">925530b9-7465-4ab1-b6a0-0da2edc1e888</identifier>
+                <schemaName>DBO</schemaName>
+                <type>TABLE</type>
+              </parent>
+              <type>COLUMN</type>
+            </objectID>
+            <outerJoin>false</outerJoin>
+            <qualified>true</qualified>
+          </expression>
+          <order>ASC</order>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>UNIQUE</indexType>
+      <parallelDegree>1</parallelDegree>
+      <schema>
+        <name>DBO</name>
+      </schema>
+      <systemGenerated>true</systemGenerated>
+    </indexe>
+    <indexe>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">41c931ff-e6ff-4904-af6e-ae7e9371cb6a</identifier>
+      </ID>
+      <name>SCHEDULE_UK1</name>
+      <columnExpressions>
+        <columnExpression>
+          <ID class="oracle.javatools.db.IdentifierBasedID">
+            <identifier class="java.lang.String">e7c62f79-dcf8-4f6d-91ed-621028b86f31</identifier>
+          </ID>
+          <expression class="oracle.javatools.db.sql.ColumnUsage">
+            <ID class="oracle.javatools.db.IdentifierBasedID">
+              <identifier class="java.lang.String">a215de87-63e8-4c29-b4fa-d5db7093bca1</identifier>
+            </ID>
+            <objectID class="oracle.javatools.db.IdentifierBasedID">
+              <name>CODE</name>
+              <identifier class="java.lang.String">6b5e0d62-de0a-4ff4-a3f0-6d8447ad31b6</identifier>
+              <parent class="oracle.javatools.db.IdentifierBasedID">
+                <name>SCHEDULE</name>
+                <identifier class="java.lang.String">925530b9-7465-4ab1-b6a0-0da2edc1e888</identifier>
+                <schemaName>DBO</schemaName>
+                <type>TABLE</type>
+              </parent>
+              <type>COLUMN</type>
+            </objectID>
+            <outerJoin>false</outerJoin>
+            <qualified>true</qualified>
+          </expression>
+          <order>ASC</order>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>UNIQUE</indexType>
+      <parallelDegree>1</parallelDegree>
+      <schema>
+        <name>DBO</name>
+      </schema>
+      <systemGenerated>true</systemGenerated>
+    </indexe>
+  </indexes>
+  <properties>
+    <entry>
+      <key>TableType</key>
+      <value class="oracle.javatools.db.Table$TableType">NORMAL</value>
+    </entry>
+  </properties>
+  <schema>
+    <name>DBO</name>
+  </schema>
+</table>

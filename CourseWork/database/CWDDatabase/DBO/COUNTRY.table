@@ -1,0 +1,145 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<table xmlns="http://xmlns.oracle.com/jdeveloper/1112/offlinedb">
+  <ID class="oracle.javatools.db.IdentifierBasedID">
+    <identifier class="java.lang.String">189165dd-4ba3-42eb-aecb-7086f3af9080</identifier>
+  </ID>
+  <name>COUNTRY</name>
+  <columns>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">1750bd7e-2bd6-426e-b7fa-ffa21c5c0212</identifier>
+      </ID>
+      <name>CODE</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">b4bc1bf3-5475-44ee-bd07-b1a7f13f95f0</identifier>
+        </ID>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Международный код страны/государства
+</value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">a167914b-e96e-4176-b927-5e5dd2b60661</identifier>
+      </ID>
+      <name>NAME</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">63fec9b5-db44-41f1-8180-0aead8d0296a</identifier>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">120</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.Oracle9i</providerClass>
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Название страны. Страна не может существовать без названия</value>
+        </entry>
+      </properties>
+    </column>
+  </columns>
+  <constraints>
+    <constraint class="oracle.javatools.db.PKConstraint">
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">5cb21d6e-4195-4ee1-a4a6-ed76e332a4a6</identifier>
+      </ID>
+      <name>COUNTRY_PK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>CODE</name>
+          <identifier class="java.lang.String">1750bd7e-2bd6-426e-b7fa-ffa21c5c0212</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>COUNTRY</name>
+            <identifier class="java.lang.String">189165dd-4ba3-42eb-aecb-7086f3af9080</identifier>
+            <schemaName>DBO</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>DBO</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.IdentifierBasedID">
+        <name>COUNTRY_PK</name>
+        <identifier class="java.lang.String">86440c8c-2ebe-4840-944d-ced1f73499be</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>COUNTRY</name>
+          <identifier class="java.lang.String">189165dd-4ba3-42eb-aecb-7086f3af9080</identifier>
+          <schemaName>DBO</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>DBO</schemaName>
+        <type>INDEX</type>
+      </indexID>
+    </constraint>
+  </constraints>
+  <indexes>
+    <indexe>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">86440c8c-2ebe-4840-944d-ced1f73499be</identifier>
+      </ID>
+      <name>COUNTRY_PK</name>
+      <columnExpressions>
+        <columnExpression>
+          <ID class="oracle.javatools.db.IdentifierBasedID">
+            <identifier class="java.lang.String">b8af463a-3a3b-4143-9688-1becca0d9821</identifier>
+          </ID>
+          <expression class="oracle.javatools.db.sql.ColumnUsage">
+            <ID class="oracle.javatools.db.IdentifierBasedID">
+              <identifier class="java.lang.String">a05477f4-ea65-4fb8-9fe3-d4c871bf321e</identifier>
+            </ID>
+            <objectID class="oracle.javatools.db.IdentifierBasedID">
+              <name>CODE</name>
+              <identifier class="java.lang.String">1750bd7e-2bd6-426e-b7fa-ffa21c5c0212</identifier>
+              <parent class="oracle.javatools.db.IdentifierBasedID">
+                <name>COUNTRY</name>
+                <identifier class="java.lang.String">189165dd-4ba3-42eb-aecb-7086f3af9080</identifier>
+                <schemaName>DBO</schemaName>
+                <type>TABLE</type>
+              </parent>
+              <schemaName>DBO</schemaName>
+              <type>COLUMN</type>
+            </objectID>
+            <outerJoin>false</outerJoin>
+            <qualified>true</qualified>
+          </expression>
+          <order>ASC</order>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>UNIQUE</indexType>
+      <parallelDegree>1</parallelDegree>
+      <schema>
+        <name>DBO</name>
+      </schema>
+      <systemGenerated>true</systemGenerated>
+    </indexe>
+  </indexes>
+  <properties>
+    <entry>
+      <key>TableType</key>
+      <value class="oracle.javatools.db.Table$TableType">NORMAL</value>
+    </entry>
+  </properties>
+  <schema>
+    <name>DBO</name>
+  </schema>
+</table>

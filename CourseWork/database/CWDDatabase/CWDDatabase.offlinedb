@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<ProviderSettings xmlns="http://xmlns.oracle.com/ide/hash">
+   <hash n="dataTypeSettings">
+      <value n="sourceKey" v="oracle.javatools.db.ora.Oracle11gR2"/>
+   </hash>
+   <value n="id" v="ab7f55b9-ccbe-4124-8fda-a55d08f5c7ca"/>
+   <value n="name" v="CWDDatabase"/>
+</ProviderSettings>

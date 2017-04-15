@@ -1,0 +1,327 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<table xmlns="http://xmlns.oracle.com/jdeveloper/1112/offlinedb">
+  <ID class="oracle.javatools.db.IdentifierBasedID">
+    <identifier class="java.lang.String">5f6c5124-0cc9-4c3b-9dbc-bc8294525afb</identifier>
+  </ID>
+  <name>SEAT</name>
+  <columns>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">5099b65a-26bc-4521-8029-fbe469f42cd0</identifier>
+      </ID>
+      <name>TRAIN_COMPOSITION_CODE</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">a0685558-118d-413d-b1c6-bdcf156daf95</identifier>
+        </ID>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Идентификатор состава</value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">d2e8e365-7565-40f0-9e01-75366dd08d5d</identifier>
+      </ID>
+      <name>SEAT_NUMBER</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">78ee3104-845a-4979-97c2-6db045da34b0</identifier>
+        </ID>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Номер места</value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">3dbf476d-2f5c-4ad3-b04e-34bc3e823ed5</identifier>
+      </ID>
+      <name>CODE</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">177ca2a0-4d71-4f53-8cbd-a1cfca60377c</identifier>
+        </ID>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>AUTO_GENERATED_SEQUENCE</key>
+          <value class="oracle.javatools.db.IdentifierBasedID">
+            <name>SEAT_SEQ</name>
+            <identifier class="java.lang.String">ade80710-ed1c-4b99-9ad4-2e5f0870e442</identifier>
+            <schemaName>DBO</schemaName>
+            <type>SEQUENCE</type>
+          </value>
+        </entry>
+        <entry>
+          <key>AUTO_GENERATED_SEQUENCE_TRIGGER</key>
+          <value class="oracle.javatools.db.NameBasedID">
+            <name>SEAT_TRG</name>
+            <schemaName>DBO</schemaName>
+            <type>TRIGGER</type>
+          </value>
+        </entry>
+        <entry>
+          <key>ColumnSequenceExpander.ReuseSequence</key>
+          <value class="java.lang.Boolean">false</value>
+        </entry>
+        <entry>
+          <key>ColumnSequenceExpander.TriggerNullCheck</key>
+          <value class="java.lang.Boolean">true</value>
+        </entry>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Идентификатор места</value>
+        </entry>
+      </properties>
+    </column>
+  </columns>
+  <constraints>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">e2f1fd1c-5a72-4e38-b51f-b7ca094e62bf</identifier>
+      </ID>
+      <name>SEAT_TRAIN_COMPOSITION_FK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>TRAIN_COMPOSITION_CODE</name>
+          <identifier class="java.lang.String">5099b65a-26bc-4521-8029-fbe469f42cd0</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>SEAT</name>
+            <identifier class="java.lang.String">5f6c5124-0cc9-4c3b-9dbc-bc8294525afb</identifier>
+            <schemaName>DBO</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>DBO</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <deleteMode>0</deleteMode>
+      <enabled>true</enabled>
+      <referenceID class="oracle.javatools.db.IdentifierBasedID">
+        <name>TRAIN_COMPOSITION_UK1</name>
+        <identifier class="java.lang.String">f1f72779-d34b-4e73-bf69-ad7ba70e60b6</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>TRAIN_COMPOSITION</name>
+          <identifier class="java.lang.String">a442aa8d-c839-4f00-a16b-4f0071ae814b</identifier>
+          <schemaName>DBO</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+    <constraint class="oracle.javatools.db.PKConstraint">
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">064513cd-f3e5-4ba6-9850-5d4e0c8e5388</identifier>
+      </ID>
+      <name>SEAT_PK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>SEAT_NUMBER</name>
+          <identifier class="java.lang.String">d2e8e365-7565-40f0-9e01-75366dd08d5d</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>SEAT</name>
+            <identifier class="java.lang.String">5f6c5124-0cc9-4c3b-9dbc-bc8294525afb</identifier>
+            <schemaName>DBO</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>DBO</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>TRAIN_COMPOSITION_CODE</name>
+          <identifier class="java.lang.String">5099b65a-26bc-4521-8029-fbe469f42cd0</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>SEAT</name>
+            <identifier class="java.lang.String">5f6c5124-0cc9-4c3b-9dbc-bc8294525afb</identifier>
+            <schemaName>DBO</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>DBO</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.IdentifierBasedID">
+        <name>SEAT_PK</name>
+        <identifier class="java.lang.String">615a4df5-fb87-4eb4-9fd0-d86e74a53514</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>SEAT</name>
+          <identifier class="java.lang.String">5f6c5124-0cc9-4c3b-9dbc-bc8294525afb</identifier>
+          <schemaName>DBO</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>DBO</schemaName>
+        <type>INDEX</type>
+      </indexID>
+    </constraint>
+    <constraint class="oracle.javatools.db.UniqueConstraint">
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">40598fc6-37f6-4a61-9213-932e9dcc7f9e</identifier>
+      </ID>
+      <name>SEAT_UK1</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>CODE</name>
+          <identifier class="java.lang.String">3dbf476d-2f5c-4ad3-b04e-34bc3e823ed5</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>SEAT</name>
+            <identifier class="java.lang.String">5f6c5124-0cc9-4c3b-9dbc-bc8294525afb</identifier>
+            <schemaName>DBO</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>DBO</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.IdentifierBasedID">
+        <name>SEAT_UK1</name>
+        <identifier class="java.lang.String">c2a86f56-e409-4e2f-b3e4-ade4e87c7fa2</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>SEAT</name>
+          <identifier class="java.lang.String">5f6c5124-0cc9-4c3b-9dbc-bc8294525afb</identifier>
+          <schemaName>DBO</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>DBO</schemaName>
+        <type>INDEX</type>
+      </indexID>
+    </constraint>
+  </constraints>
+  <indexes>
+    <indexe>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">615a4df5-fb87-4eb4-9fd0-d86e74a53514</identifier>
+      </ID>
+      <name>SEAT_PK</name>
+      <columnExpressions>
+        <columnExpression>
+          <ID class="oracle.javatools.db.IdentifierBasedID">
+            <identifier class="java.lang.String">765000bb-a69d-479f-8885-d5a10f2e0987</identifier>
+          </ID>
+          <expression class="oracle.javatools.db.sql.ColumnUsage">
+            <ID class="oracle.javatools.db.IdentifierBasedID">
+              <identifier class="java.lang.String">9bc64410-e67c-4405-a341-7559f8715374</identifier>
+            </ID>
+            <objectID class="oracle.javatools.db.IdentifierBasedID">
+              <name>SEAT_NUMBER</name>
+              <identifier class="java.lang.String">d2e8e365-7565-40f0-9e01-75366dd08d5d</identifier>
+              <parent class="oracle.javatools.db.IdentifierBasedID">
+                <name>SEAT</name>
+                <identifier class="java.lang.String">5f6c5124-0cc9-4c3b-9dbc-bc8294525afb</identifier>
+                <schemaName>DBO</schemaName>
+                <type>TABLE</type>
+              </parent>
+              <schemaName>DBO</schemaName>
+              <type>COLUMN</type>
+            </objectID>
+            <outerJoin>false</outerJoin>
+            <qualified>true</qualified>
+          </expression>
+          <order>ASC</order>
+        </columnExpression>
+        <columnExpression>
+          <ID class="oracle.javatools.db.IdentifierBasedID">
+            <identifier class="java.lang.String">7aed382e-af8f-4c64-a806-b1f3356db788</identifier>
+          </ID>
+          <expression class="oracle.javatools.db.sql.ColumnUsage">
+            <ID class="oracle.javatools.db.IdentifierBasedID">
+              <identifier class="java.lang.String">154b6f7a-8f2b-4b9d-9bb8-7fc6ca305a44</identifier>
+            </ID>
+            <objectID class="oracle.javatools.db.IdentifierBasedID">
+              <name>TRAIN_COMPOSITION_CODE</name>
+              <identifier class="java.lang.String">5099b65a-26bc-4521-8029-fbe469f42cd0</identifier>
+              <parent class="oracle.javatools.db.IdentifierBasedID">
+                <name>SEAT</name>
+                <identifier class="java.lang.String">5f6c5124-0cc9-4c3b-9dbc-bc8294525afb</identifier>
+                <schemaName>DBO</schemaName>
+                <type>TABLE</type>
+              </parent>
+              <schemaName>DBO</schemaName>
+              <type>COLUMN</type>
+            </objectID>
+            <outerJoin>false</outerJoin>
+            <qualified>true</qualified>
+          </expression>
+          <order>ASC</order>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>UNIQUE</indexType>
+      <parallelDegree>1</parallelDegree>
+      <schema>
+        <name>DBO</name>
+      </schema>
+      <systemGenerated>true</systemGenerated>
+    </indexe>
+    <indexe>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">c2a86f56-e409-4e2f-b3e4-ade4e87c7fa2</identifier>
+      </ID>
+      <name>SEAT_UK1</name>
+      <columnExpressions>
+        <columnExpression>
+          <ID class="oracle.javatools.db.IdentifierBasedID">
+            <identifier class="java.lang.String">fc2c771b-51a8-4cb5-a511-4df859cb7c2a</identifier>
+          </ID>
+          <expression class="oracle.javatools.db.sql.ColumnUsage">
+            <ID class="oracle.javatools.db.IdentifierBasedID">
+              <identifier class="java.lang.String">d6eef8a3-e8e8-4adb-85b2-1725026c3f15</identifier>
+            </ID>
+            <objectID class="oracle.javatools.db.IdentifierBasedID">
+              <name>CODE</name>
+              <identifier class="java.lang.String">3dbf476d-2f5c-4ad3-b04e-34bc3e823ed5</identifier>
+              <parent class="oracle.javatools.db.IdentifierBasedID">
+                <name>SEAT</name>
+                <identifier class="java.lang.String">5f6c5124-0cc9-4c3b-9dbc-bc8294525afb</identifier>
+                <schemaName>DBO</schemaName>
+                <type>TABLE</type>
+              </parent>
+              <schemaName>DBO</schemaName>
+              <type>COLUMN</type>
+            </objectID>
+            <outerJoin>false</outerJoin>
+            <qualified>true</qualified>
+          </expression>
+          <order>ASC</order>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>UNIQUE</indexType>
+      <parallelDegree>1</parallelDegree>
+      <schema>
+        <name>DBO</name>
+      </schema>
+      <systemGenerated>true</systemGenerated>
+    </indexe>
+  </indexes>
+  <properties>
+    <entry>
+      <key>TableType</key>
+      <value class="oracle.javatools.db.Table$TableType">NORMAL</value>
+    </entry>
+  </properties>
+  <schema>
+    <name>DBO</name>
+  </schema>
+</table>

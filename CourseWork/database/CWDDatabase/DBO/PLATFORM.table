@@ -1,0 +1,197 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<table xmlns="http://xmlns.oracle.com/jdeveloper/1112/offlinedb">
+  <ID class="oracle.javatools.db.IdentifierBasedID">
+    <identifier class="java.lang.String">195dc673-ead7-452a-b994-b574698b327a</identifier>
+  </ID>
+  <name>PLATFORM</name>
+  <columns>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">bec93a44-8134-4975-bcc4-ff50da7d638e</identifier>
+      </ID>
+      <name>STATION_CODE</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">09adabde-6d4a-46de-b7fa-15cc575fe5ae</identifier>
+        </ID>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Код станции. Платформа без станции не может быть</value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">a07bcbce-9ba8-4e26-a95d-2d906d3899da</identifier>
+      </ID>
+      <name>CODE</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">30592b54-f535-4763-90c6-90085f829cc9</identifier>
+        </ID>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Код платформы</value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">cd166975-633e-4d38-b10d-3b806beaa7f9</identifier>
+      </ID>
+      <name>PLATFORM_NUMBER</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">23fe0f16-7f7d-48f0-ba87-451c1155c80b</identifier>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">20</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.Oracle9i</providerClass>
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Номер платформы</value>
+        </entry>
+      </properties>
+    </column>
+  </columns>
+  <constraints>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">f6be1158-8c3e-443b-9665-43eb58012546</identifier>
+      </ID>
+      <name>PLATFORM_STATION_FK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>STATION_CODE</name>
+          <identifier class="java.lang.String">bec93a44-8134-4975-bcc4-ff50da7d638e</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>PLATFORM</name>
+            <identifier class="java.lang.String">195dc673-ead7-452a-b994-b574698b327a</identifier>
+            <schemaName>DBO</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <deleteMode>0</deleteMode>
+      <enabled>true</enabled>
+      <referenceID class="oracle.javatools.db.IdentifierBasedID">
+        <name>STATION_PK</name>
+        <identifier class="java.lang.String">7e72e035-1a3c-4e65-913d-2c70478d3a87</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>STATION</name>
+          <identifier class="java.lang.String">b6872f02-98b2-4101-949f-ed2cbeebe18e</identifier>
+          <schemaName>DBO</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>DBO</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+    <constraint class="oracle.javatools.db.PKConstraint">
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">0ffeddf9-e569-4eed-bf2e-d67976d09bcb</identifier>
+      </ID>
+      <name>PLATFORM_PK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>CODE</name>
+          <identifier class="java.lang.String">a07bcbce-9ba8-4e26-a95d-2d906d3899da</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>PLATFORM</name>
+            <identifier class="java.lang.String">195dc673-ead7-452a-b994-b574698b327a</identifier>
+            <schemaName>DBO</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.IdentifierBasedID">
+        <name>PLATFORM_PK</name>
+        <identifier class="java.lang.String">09a25d92-05ee-4c9e-b28b-709bab478280</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>PLATFORM</name>
+          <identifier class="java.lang.String">195dc673-ead7-452a-b994-b574698b327a</identifier>
+          <schemaName>DBO</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>DBO</schemaName>
+        <type>INDEX</type>
+      </indexID>
+    </constraint>
+  </constraints>
+  <indexes>
+    <indexe>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">09a25d92-05ee-4c9e-b28b-709bab478280</identifier>
+      </ID>
+      <name>PLATFORM_PK</name>
+      <columnExpressions>
+        <columnExpression>
+          <ID class="oracle.javatools.db.IdentifierBasedID">
+            <identifier class="java.lang.String">6a37bf92-e5dc-40d7-a15b-3bc986e3ecb6</identifier>
+          </ID>
+          <expression class="oracle.javatools.db.sql.ColumnUsage">
+            <ID class="oracle.javatools.db.IdentifierBasedID">
+              <identifier class="java.lang.String">46263efe-b4d5-4e53-8874-360ac3b70d13</identifier>
+            </ID>
+            <objectID class="oracle.javatools.db.IdentifierBasedID">
+              <name>CODE</name>
+              <identifier class="java.lang.String">a07bcbce-9ba8-4e26-a95d-2d906d3899da</identifier>
+              <parent class="oracle.javatools.db.IdentifierBasedID">
+                <name>PLATFORM</name>
+                <identifier class="java.lang.String">195dc673-ead7-452a-b994-b574698b327a</identifier>
+                <schemaName>DBO</schemaName>
+                <type>TABLE</type>
+              </parent>
+              <type>COLUMN</type>
+            </objectID>
+            <outerJoin>false</outerJoin>
+            <qualified>true</qualified>
+          </expression>
+          <order>ASC</order>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>UNIQUE</indexType>
+      <parallelDegree>1</parallelDegree>
+      <schema>
+        <name>DBO</name>
+      </schema>
+      <systemGenerated>true</systemGenerated>
+    </indexe>
+  </indexes>
+  <properties>
+    <entry>
+      <key>TableType</key>
+      <value class="oracle.javatools.db.Table$TableType">NORMAL</value>
+    </entry>
+  </properties>
+  <schema>
+    <name>DBO</name>
+  </schema>
+</table>

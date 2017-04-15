@@ -1,0 +1,116 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<table xmlns="http://xmlns.oracle.com/jdeveloper/1112/offlinedb">
+  <ID class="oracle.javatools.db.IdentifierBasedID">
+    <identifier class="java.lang.String">519eaa73-62d5-416f-a75c-52ae1641d0a3</identifier>
+  </ID>
+  <name>TRAIN</name>
+  <columns>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">38a8c470-bca4-4cb6-b5d1-4e3b99b427ab</identifier>
+      </ID>
+      <name>CODE</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">2a4bec56-e2d0-471c-9dc0-2a7c7a899be4</identifier>
+        </ID>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Индивидуальный номер поезда</value>
+        </entry>
+      </properties>
+    </column>
+  </columns>
+  <constraints>
+    <constraint class="oracle.javatools.db.PKConstraint">
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">766d9e8a-9773-49a1-b883-292d2782ab0c</identifier>
+      </ID>
+      <name>TRAIN_PK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>CODE</name>
+          <identifier class="java.lang.String">38a8c470-bca4-4cb6-b5d1-4e3b99b427ab</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>TRAIN</name>
+            <identifier class="java.lang.String">519eaa73-62d5-416f-a75c-52ae1641d0a3</identifier>
+            <schemaName>DBO</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>DBO</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.IdentifierBasedID">
+        <name>TRAIN_PK</name>
+        <identifier class="java.lang.String">76b73bc9-ac30-4a7f-8f36-bafdfb9eb241</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>TRAIN</name>
+          <identifier class="java.lang.String">519eaa73-62d5-416f-a75c-52ae1641d0a3</identifier>
+          <schemaName>DBO</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>DBO</schemaName>
+        <type>INDEX</type>
+      </indexID>
+    </constraint>
+  </constraints>
+  <indexes>
+    <indexe>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">76b73bc9-ac30-4a7f-8f36-bafdfb9eb241</identifier>
+      </ID>
+      <name>TRAIN_PK</name>
+      <columnExpressions>
+        <columnExpression>
+          <ID class="oracle.javatools.db.IdentifierBasedID">
+            <identifier class="java.lang.String">001402bc-6d24-436a-9049-f901bb35cb23</identifier>
+          </ID>
+          <expression class="oracle.javatools.db.sql.ColumnUsage">
+            <ID class="oracle.javatools.db.IdentifierBasedID">
+              <identifier class="java.lang.String">f15e8410-8afe-455f-9f2b-003af0b74416</identifier>
+            </ID>
+            <objectID class="oracle.javatools.db.IdentifierBasedID">
+              <name>CODE</name>
+              <identifier class="java.lang.String">38a8c470-bca4-4cb6-b5d1-4e3b99b427ab</identifier>
+              <parent class="oracle.javatools.db.IdentifierBasedID">
+                <name>TRAIN</name>
+                <identifier class="java.lang.String">519eaa73-62d5-416f-a75c-52ae1641d0a3</identifier>
+                <schemaName>DBO</schemaName>
+                <type>TABLE</type>
+              </parent>
+              <schemaName>DBO</schemaName>
+              <type>COLUMN</type>
+            </objectID>
+            <outerJoin>false</outerJoin>
+            <qualified>true</qualified>
+          </expression>
+          <order>ASC</order>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>UNIQUE</indexType>
+      <parallelDegree>1</parallelDegree>
+      <schema>
+        <name>DBO</name>
+      </schema>
+      <systemGenerated>true</systemGenerated>
+    </indexe>
+  </indexes>
+  <properties>
+    <entry>
+      <key>TableType</key>
+      <value class="oracle.javatools.db.Table$TableType">NORMAL</value>
+    </entry>
+  </properties>
+  <schema>
+    <name>DBO</name>
+  </schema>
+</table>

@@ -1,0 +1,403 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<table xmlns="http://xmlns.oracle.com/jdeveloper/1112/offlinedb">
+  <ID class="oracle.javatools.db.IdentifierBasedID">
+    <identifier class="java.lang.String">b0ccfef8-3765-404d-bc3b-6df9cb999ab1</identifier>
+  </ID>
+  <name>TICKET</name>
+  <columns>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">62af5c31-9444-4571-833d-dcb1d49625df</identifier>
+      </ID>
+      <name>ARRIVAL_SCHEDULE_CODE</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">e13e6398-c619-4561-9abb-bf32c689734e</identifier>
+        </ID>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Пункт прбытия из расписания. Билет не может не иметь пункта прибытия </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">2458ff24-7e82-4de5-9fcf-d9ff767b610f</identifier>
+      </ID>
+      <name>CODE</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">7ed50e09-b500-4d3d-80aa-ae58d4fcafe2</identifier>
+        </ID>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>AUTO_GENERATED_SEQUENCE</key>
+          <value class="oracle.javatools.db.IdentifierBasedID">
+            <name>TICKET_SEQ</name>
+            <identifier class="java.lang.String">a12c3fa5-5a16-4ca3-bc3f-f334e983c412</identifier>
+            <schemaName>DBO</schemaName>
+            <type>SEQUENCE</type>
+          </value>
+        </entry>
+        <entry>
+          <key>AUTO_GENERATED_SEQUENCE_TRIGGER</key>
+          <value class="oracle.javatools.db.NameBasedID">
+            <name>TICKET_TRG</name>
+            <schemaName>DBO</schemaName>
+            <type>TRIGGER</type>
+          </value>
+        </entry>
+        <entry>
+          <key>ColumnSequenceExpander.ReuseSequence</key>
+          <value class="java.lang.Boolean">false</value>
+        </entry>
+        <entry>
+          <key>ColumnSequenceExpander.TriggerNullCheck</key>
+          <value class="java.lang.Boolean">true</value>
+        </entry>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Номер билета</value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">4019538f-80c7-4605-aca4-a9e8b8aa654c</identifier>
+      </ID>
+      <name>COST</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">f1a75cce-81ea-4bab-8d01-055ea6ab7829</identifier>
+        </ID>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>DOUBLE PRECISION</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Стоимость билета</value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">19841906-dd8f-430d-beba-68f6cdb6ef0e</identifier>
+      </ID>
+      <name>DEPARTURE_SCHEDULE_CODE</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">f0c15e6e-837e-4355-8526-4b4437ef4214</identifier>
+        </ID>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Пункт отправления из расписания. Билет не может не иметь пункт отправления</value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">ee693328-e6fe-4edf-8f7b-6cd5bc8b5492</identifier>
+      </ID>
+      <name>SEAT_CODE</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">aece4ce4-069c-4bd4-9c05-1201a802260a</identifier>
+        </ID>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Идентификатор места. Билет идентифицируется местом</value>
+        </entry>
+      </properties>
+    </column>
+  </columns>
+  <constraints>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">bc90cd1c-cd3d-4c23-91f6-8c20fa1518f2</identifier>
+      </ID>
+      <name>TICKET_SCHEDULE_FK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>ARRIVAL_SCHEDULE_CODE</name>
+          <identifier class="java.lang.String">62af5c31-9444-4571-833d-dcb1d49625df</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>TICKET</name>
+            <identifier class="java.lang.String">b0ccfef8-3765-404d-bc3b-6df9cb999ab1</identifier>
+            <schemaName>DBO</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>DBO</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <deleteMode>0</deleteMode>
+      <enabled>true</enabled>
+      <referenceID class="oracle.javatools.db.IdentifierBasedID">
+        <name>SCHEDULE_UK1</name>
+        <identifier class="java.lang.String">781ffb9b-a916-456a-add4-148daf31ffb3</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>SCHEDULE</name>
+          <identifier class="java.lang.String">925530b9-7465-4ab1-b6a0-0da2edc1e888</identifier>
+          <schemaName>DBO</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>DBO</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">9b4bc242-c30a-49c2-8ea4-59037b7652ac</identifier>
+      </ID>
+      <name>TICKET_SCHEDULE_FK1</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>DEPARTURE_SCHEDULE_CODE</name>
+          <identifier class="java.lang.String">19841906-dd8f-430d-beba-68f6cdb6ef0e</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>TICKET</name>
+            <identifier class="java.lang.String">b0ccfef8-3765-404d-bc3b-6df9cb999ab1</identifier>
+            <schemaName>DBO</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>DBO</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <deleteMode>0</deleteMode>
+      <enabled>true</enabled>
+      <referenceID class="oracle.javatools.db.IdentifierBasedID">
+        <name>SCHEDULE_UK1</name>
+        <identifier class="java.lang.String">781ffb9b-a916-456a-add4-148daf31ffb3</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>SCHEDULE</name>
+          <identifier class="java.lang.String">925530b9-7465-4ab1-b6a0-0da2edc1e888</identifier>
+          <schemaName>DBO</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>DBO</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">156f1c50-6c9c-4236-97b5-1f12fadb92c7</identifier>
+      </ID>
+      <name>TICKET_SEAT_FK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>SEAT_CODE</name>
+          <identifier class="java.lang.String">ee693328-e6fe-4edf-8f7b-6cd5bc8b5492</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>TICKET</name>
+            <identifier class="java.lang.String">b0ccfef8-3765-404d-bc3b-6df9cb999ab1</identifier>
+            <schemaName>DBO</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>DBO</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <deleteMode>0</deleteMode>
+      <enabled>true</enabled>
+      <referenceID class="oracle.javatools.db.IdentifierBasedID">
+        <name>SEAT_UK1</name>
+        <identifier class="java.lang.String">40598fc6-37f6-4a61-9213-932e9dcc7f9e</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>SEAT</name>
+          <identifier class="java.lang.String">5f6c5124-0cc9-4c3b-9dbc-bc8294525afb</identifier>
+          <schemaName>DBO</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>DBO</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+    <constraint class="oracle.javatools.db.PKConstraint">
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">e1fb1aa5-8c6f-4cf5-b6f4-d238a32f2392</identifier>
+      </ID>
+      <name>TICKET_PK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>SEAT_CODE</name>
+          <identifier class="java.lang.String">ee693328-e6fe-4edf-8f7b-6cd5bc8b5492</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>TICKET</name>
+            <identifier class="java.lang.String">b0ccfef8-3765-404d-bc3b-6df9cb999ab1</identifier>
+            <schemaName>DBO</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>DBO</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.IdentifierBasedID">
+        <name>TICKET_PK</name>
+        <identifier class="java.lang.String">57142de9-2829-45c3-ac2f-e6eb6f47d434</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>TICKET</name>
+          <identifier class="java.lang.String">b0ccfef8-3765-404d-bc3b-6df9cb999ab1</identifier>
+          <schemaName>DBO</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>DBO</schemaName>
+        <type>INDEX</type>
+      </indexID>
+    </constraint>
+    <constraint class="oracle.javatools.db.UniqueConstraint">
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">b96fad19-dedb-4c37-942f-a1a99ca62531</identifier>
+      </ID>
+      <name>TICKET_UK1</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>CODE</name>
+          <identifier class="java.lang.String">2458ff24-7e82-4de5-9fcf-d9ff767b610f</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>TICKET</name>
+            <identifier class="java.lang.String">b0ccfef8-3765-404d-bc3b-6df9cb999ab1</identifier>
+            <schemaName>DBO</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>DBO</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.IdentifierBasedID">
+        <name>TICKET_UK1</name>
+        <identifier class="java.lang.String">5e488e8e-bd02-429a-a844-02a1b0d5df34</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>TICKET</name>
+          <identifier class="java.lang.String">b0ccfef8-3765-404d-bc3b-6df9cb999ab1</identifier>
+          <schemaName>DBO</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>DBO</schemaName>
+        <type>INDEX</type>
+      </indexID>
+    </constraint>
+  </constraints>
+  <indexes>
+    <indexe>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">57142de9-2829-45c3-ac2f-e6eb6f47d434</identifier>
+      </ID>
+      <name>TICKET_PK</name>
+      <columnExpressions>
+        <columnExpression>
+          <ID class="oracle.javatools.db.IdentifierBasedID">
+            <identifier class="java.lang.String">93f0d458-0a19-47f6-9c98-a67e56feb41d</identifier>
+          </ID>
+          <expression class="oracle.javatools.db.sql.ColumnUsage">
+            <ID class="oracle.javatools.db.IdentifierBasedID">
+              <identifier class="java.lang.String">f6c79101-bd8e-4750-8cbf-d77566309ec3</identifier>
+            </ID>
+            <objectID class="oracle.javatools.db.IdentifierBasedID">
+              <name>SEAT_CODE</name>
+              <identifier class="java.lang.String">ee693328-e6fe-4edf-8f7b-6cd5bc8b5492</identifier>
+              <parent class="oracle.javatools.db.IdentifierBasedID">
+                <name>TICKET</name>
+                <identifier class="java.lang.String">b0ccfef8-3765-404d-bc3b-6df9cb999ab1</identifier>
+                <schemaName>DBO</schemaName>
+                <type>TABLE</type>
+              </parent>
+              <schemaName>DBO</schemaName>
+              <type>COLUMN</type>
+            </objectID>
+            <outerJoin>false</outerJoin>
+            <qualified>true</qualified>
+          </expression>
+          <order>ASC</order>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>UNIQUE</indexType>
+      <parallelDegree>1</parallelDegree>
+      <schema>
+        <name>DBO</name>
+      </schema>
+      <systemGenerated>true</systemGenerated>
+    </indexe>
+    <indexe>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">5e488e8e-bd02-429a-a844-02a1b0d5df34</identifier>
+      </ID>
+      <name>TICKET_UK1</name>
+      <columnExpressions>
+        <columnExpression>
+          <ID class="oracle.javatools.db.IdentifierBasedID">
+            <identifier class="java.lang.String">73b178c3-d3d5-43d7-9d34-900c4b7ba9e0</identifier>
+          </ID>
+          <expression class="oracle.javatools.db.sql.ColumnUsage">
+            <ID class="oracle.javatools.db.IdentifierBasedID">
+              <identifier class="java.lang.String">337e09d6-0cd8-48f5-9974-b7094f5846a7</identifier>
+            </ID>
+            <objectID class="oracle.javatools.db.IdentifierBasedID">
+              <name>CODE</name>
+              <identifier class="java.lang.String">2458ff24-7e82-4de5-9fcf-d9ff767b610f</identifier>
+              <parent class="oracle.javatools.db.IdentifierBasedID">
+                <name>TICKET</name>
+                <identifier class="java.lang.String">b0ccfef8-3765-404d-bc3b-6df9cb999ab1</identifier>
+                <schemaName>DBO</schemaName>
+                <type>TABLE</type>
+              </parent>
+              <schemaName>DBO</schemaName>
+              <type>COLUMN</type>
+            </objectID>
+            <outerJoin>false</outerJoin>
+            <qualified>true</qualified>
+          </expression>
+          <order>ASC</order>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>UNIQUE</indexType>
+      <parallelDegree>1</parallelDegree>
+      <schema>
+        <name>DBO</name>
+      </schema>
+      <systemGenerated>true</systemGenerated>
+    </indexe>
+  </indexes>
+  <properties>
+    <entry>
+      <key>TableType</key>
+      <value class="oracle.javatools.db.Table$TableType">NORMAL</value>
+    </entry>
+  </properties>
+  <schema>
+    <name>DBO</name>
+  </schema>
+</table>

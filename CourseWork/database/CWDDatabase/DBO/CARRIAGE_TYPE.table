@@ -1,0 +1,318 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<table xmlns="http://xmlns.oracle.com/jdeveloper/1112/offlinedb">
+  <ID class="oracle.javatools.db.IdentifierBasedID">
+    <identifier class="java.lang.String">3e0d34c0-7b70-46f3-b066-833ead0ca3b3</identifier>
+  </ID>
+  <name>CARRIAGE_TYPE</name>
+  <columns>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">95daafbc-7763-4a05-8394-3fd5bf49d36c</identifier>
+      </ID>
+      <name>NAME</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">c4e02b97-a31d-4525-9448-38476d514fab</identifier>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">40</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.Oracle9i</providerClass>
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Название типа вагона</value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">e1841169-198d-4d9e-97a6-126cc6836511</identifier>
+      </ID>
+      <name>COST</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">d9df6fa0-2a19-464a-a7db-c174ca81514e</identifier>
+        </ID>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>DOUBLE PRECISION</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Стоимость вагона</value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">547f99e8-d23f-4828-aef2-5d58e1658b2e</identifier>
+      </ID>
+      <name>ABBREVIATION</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">360e3187-dad1-4f4d-a000-661ccbc9c1a1</identifier>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">20</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.Oracle9i</providerClass>
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">30d5cc46-4679-4969-85bc-b06a790782c3</identifier>
+      </ID>
+      <name>CODE</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">a06bd747-79a6-4678-93f2-280ff948e2c0</identifier>
+        </ID>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>AUTO_GENERATED_SEQUENCE</key>
+          <value class="oracle.javatools.db.IdentifierBasedID">
+            <name>CARRIAGE_TYPE_SEQ</name>
+            <identifier class="java.lang.String">a9beb369-fb24-4bee-996d-c701194bf828</identifier>
+            <schemaName>DBO</schemaName>
+            <type>SEQUENCE</type>
+          </value>
+        </entry>
+        <entry>
+          <key>AUTO_GENERATED_SEQUENCE_TRIGGER</key>
+          <value class="oracle.javatools.db.NameBasedID">
+            <name>CARRIAGE_TYPE_TRG</name>
+            <schemaName>DBO</schemaName>
+            <type>TRIGGER</type>
+          </value>
+        </entry>
+        <entry>
+          <key>ColumnSequenceExpander.ReuseSequence</key>
+          <value class="java.lang.Boolean">false</value>
+        </entry>
+        <entry>
+          <key>ColumnSequenceExpander.TriggerNullCheck</key>
+          <value class="java.lang.Boolean">true</value>
+        </entry>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Код типа</value>
+        </entry>
+      </properties>
+    </column>
+  </columns>
+  <constraints>
+    <constraint class="oracle.javatools.db.PKConstraint">
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">06b3678c-7798-4930-b64a-6f0c97fa7589</identifier>
+      </ID>
+      <name>CARRIAGE_TYPE_PK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>NAME</name>
+          <identifier class="java.lang.String">95daafbc-7763-4a05-8394-3fd5bf49d36c</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>CARRIAGE_TYPE</name>
+            <identifier class="java.lang.String">3e0d34c0-7b70-46f3-b066-833ead0ca3b3</identifier>
+            <schemaName>DBO</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <type>COLUMN</type>
+        </columnID>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>ABBREVIATION</name>
+          <identifier class="java.lang.String">547f99e8-d23f-4828-aef2-5d58e1658b2e</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>CARRIAGE_TYPE</name>
+            <identifier class="java.lang.String">3e0d34c0-7b70-46f3-b066-833ead0ca3b3</identifier>
+            <schemaName>DBO</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.IdentifierBasedID">
+        <name>CARRIAGE_TYPE_PK</name>
+        <identifier class="java.lang.String">bebc600d-924a-49cf-bf9c-c12d6f10a72a</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>CARRIAGE_TYPE</name>
+          <identifier class="java.lang.String">3e0d34c0-7b70-46f3-b066-833ead0ca3b3</identifier>
+          <schemaName>DBO</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>DBO</schemaName>
+        <type>INDEX</type>
+      </indexID>
+    </constraint>
+    <constraint class="oracle.javatools.db.UniqueConstraint">
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">bdd9c60b-55fe-4024-a46d-4ae9d370c5cb</identifier>
+      </ID>
+      <name>CARRIAGE_TYPE_UK1</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>CODE</name>
+          <identifier class="java.lang.String">30d5cc46-4679-4969-85bc-b06a790782c3</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>CARRIAGE_TYPE</name>
+            <identifier class="java.lang.String">3e0d34c0-7b70-46f3-b066-833ead0ca3b3</identifier>
+            <schemaName>DBO</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>DBO</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.IdentifierBasedID">
+        <name>CARRIAGE_TYPE_UK1</name>
+        <identifier class="java.lang.String">8d553165-fc42-4863-b417-30860bf172aa</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>CARRIAGE_TYPE</name>
+          <identifier class="java.lang.String">3e0d34c0-7b70-46f3-b066-833ead0ca3b3</identifier>
+          <schemaName>DBO</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>DBO</schemaName>
+        <type>INDEX</type>
+      </indexID>
+    </constraint>
+  </constraints>
+  <indexes>
+    <indexe>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">bebc600d-924a-49cf-bf9c-c12d6f10a72a</identifier>
+      </ID>
+      <name>CARRIAGE_TYPE_PK</name>
+      <columnExpressions>
+        <columnExpression>
+          <ID class="oracle.javatools.db.IdentifierBasedID">
+            <identifier class="java.lang.String">47cf49d9-0c17-42a2-9ec1-b0914b654028</identifier>
+          </ID>
+          <expression class="oracle.javatools.db.sql.ColumnUsage">
+            <ID class="oracle.javatools.db.IdentifierBasedID">
+              <identifier class="java.lang.String">7746163f-366a-44b9-9ed1-449b68f8c99d</identifier>
+            </ID>
+            <objectID class="oracle.javatools.db.IdentifierBasedID">
+              <name>NAME</name>
+              <identifier class="java.lang.String">95daafbc-7763-4a05-8394-3fd5bf49d36c</identifier>
+              <parent class="oracle.javatools.db.IdentifierBasedID">
+                <name>CARRIAGE_TYPE</name>
+                <identifier class="java.lang.String">3e0d34c0-7b70-46f3-b066-833ead0ca3b3</identifier>
+                <schemaName>DBO</schemaName>
+                <type>TABLE</type>
+              </parent>
+              <type>COLUMN</type>
+            </objectID>
+            <outerJoin>false</outerJoin>
+            <qualified>true</qualified>
+          </expression>
+          <order>ASC</order>
+        </columnExpression>
+        <columnExpression>
+          <ID class="oracle.javatools.db.IdentifierBasedID">
+            <identifier class="java.lang.String">9b876c51-7144-48aa-81b6-7a7d60d30e12</identifier>
+          </ID>
+          <expression class="oracle.javatools.db.sql.ColumnUsage">
+            <ID class="oracle.javatools.db.IdentifierBasedID">
+              <identifier class="java.lang.String">88ea2f46-e7eb-424f-9f38-3f7dbd01e9bc</identifier>
+            </ID>
+            <objectID class="oracle.javatools.db.IdentifierBasedID">
+              <name>ABBREVIATION</name>
+              <identifier class="java.lang.String">547f99e8-d23f-4828-aef2-5d58e1658b2e</identifier>
+              <parent class="oracle.javatools.db.IdentifierBasedID">
+                <name>CARRIAGE_TYPE</name>
+                <identifier class="java.lang.String">3e0d34c0-7b70-46f3-b066-833ead0ca3b3</identifier>
+                <schemaName>DBO</schemaName>
+                <type>TABLE</type>
+              </parent>
+              <type>COLUMN</type>
+            </objectID>
+            <outerJoin>false</outerJoin>
+            <qualified>true</qualified>
+          </expression>
+          <order>ASC</order>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>UNIQUE</indexType>
+      <parallelDegree>1</parallelDegree>
+      <schema>
+        <name>DBO</name>
+      </schema>
+      <systemGenerated>true</systemGenerated>
+    </indexe>
+    <indexe>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">8d553165-fc42-4863-b417-30860bf172aa</identifier>
+      </ID>
+      <name>CARRIAGE_TYPE_UK1</name>
+      <columnExpressions>
+        <columnExpression>
+          <ID class="oracle.javatools.db.IdentifierBasedID">
+            <identifier class="java.lang.String">72efb645-c53c-40ae-bf2b-f0a64ed350de</identifier>
+          </ID>
+          <expression class="oracle.javatools.db.sql.ColumnUsage">
+            <ID class="oracle.javatools.db.IdentifierBasedID">
+              <identifier class="java.lang.String">d5eb6cb7-d1ca-4fd5-be49-3ebd79830d40</identifier>
+            </ID>
+            <objectID class="oracle.javatools.db.IdentifierBasedID">
+              <name>CODE</name>
+              <identifier class="java.lang.String">30d5cc46-4679-4969-85bc-b06a790782c3</identifier>
+              <parent class="oracle.javatools.db.IdentifierBasedID">
+                <name>CARRIAGE_TYPE</name>
+                <identifier class="java.lang.String">3e0d34c0-7b70-46f3-b066-833ead0ca3b3</identifier>
+                <schemaName>DBO</schemaName>
+                <type>TABLE</type>
+              </parent>
+              <schemaName>DBO</schemaName>
+              <type>COLUMN</type>
+            </objectID>
+            <outerJoin>false</outerJoin>
+            <qualified>true</qualified>
+          </expression>
+          <order>ASC</order>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>UNIQUE</indexType>
+      <parallelDegree>1</parallelDegree>
+      <schema>
+        <name>DBO</name>
+      </schema>
+      <systemGenerated>true</systemGenerated>
+    </indexe>
+  </indexes>
+  <properties>
+    <entry>
+      <key>TableType</key>
+      <value class="oracle.javatools.db.Table$TableType">NORMAL</value>
+    </entry>
+  </properties>
+  <schema>
+    <name>DBO</name>
+  </schema>
+</table>

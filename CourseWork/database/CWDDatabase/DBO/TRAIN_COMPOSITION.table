@@ -1,0 +1,381 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<table xmlns="http://xmlns.oracle.com/jdeveloper/1112/offlinedb">
+  <ID class="oracle.javatools.db.IdentifierBasedID">
+    <identifier class="java.lang.String">a442aa8d-c839-4f00-a16b-4f0071ae814b</identifier>
+  </ID>
+  <name>TRAIN_COMPOSITION</name>
+  <columns>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">90a8486d-86df-4657-87a7-ce78df501dae</identifier>
+      </ID>
+      <name>CODE</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">e98dfc44-c3e6-4986-b927-59a636fa8eed</identifier>
+        </ID>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>AUTO_GENERATED_SEQUENCE</key>
+          <value class="oracle.javatools.db.IdentifierBasedID">
+            <name>TRAIN_COMPOSITION_SEQ</name>
+            <identifier class="java.lang.String">3d767eeb-9980-4cbb-9e27-0d34f52819be</identifier>
+            <schemaName>DBO</schemaName>
+            <type>SEQUENCE</type>
+          </value>
+        </entry>
+        <entry>
+          <key>AUTO_GENERATED_SEQUENCE_TRIGGER</key>
+          <value class="oracle.javatools.db.NameBasedID">
+            <name>TRAIN_COMPOSITION_TRG</name>
+            <schemaName>DBO</schemaName>
+            <type>TRIGGER</type>
+          </value>
+        </entry>
+        <entry>
+          <key>ColumnSequenceExpander.ReuseSequence</key>
+          <value class="java.lang.Boolean">false</value>
+        </entry>
+        <entry>
+          <key>ColumnSequenceExpander.TriggerNullCheck</key>
+          <value class="java.lang.Boolean">true</value>
+        </entry>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Идентификатор состава</value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">e8bd3f9b-85af-468d-bdd2-b8f7f5741e56</identifier>
+      </ID>
+      <name>CARRIAGE_NUMBER</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">97463f8f-e293-4ba7-a942-dc579b66a711</identifier>
+        </ID>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Номер вагона</value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">786b181b-1580-4cc5-aea2-3a21713a6bcf</identifier>
+      </ID>
+      <name>TRAIN_CODE</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">21d47c0c-2c20-4f67-aabc-4de6c3771bd8</identifier>
+        </ID>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Номер поезда</value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">185f10af-124e-450a-9416-cf198480736b</identifier>
+      </ID>
+      <name>CARRIAGE_TYPE</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">3a2a2682-ced5-4f22-97a9-1d83edf29ace</identifier>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Тип вагона</value>
+        </entry>
+      </properties>
+    </column>
+  </columns>
+  <constraints>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">0803ddfa-f958-4d90-a93b-b95afaf18e9d</identifier>
+      </ID>
+      <name>TRAIN_COMPOSITION_FK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>CARRIAGE_TYPE</name>
+          <identifier class="java.lang.String">185f10af-124e-450a-9416-cf198480736b</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>TRAIN_COMPOSITION</name>
+            <identifier class="java.lang.String">a442aa8d-c839-4f00-a16b-4f0071ae814b</identifier>
+            <schemaName>DBO</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <deleteMode>0</deleteMode>
+      <enabled>true</enabled>
+      <referenceID class="oracle.javatools.db.IdentifierBasedID">
+        <name>CARRIAGE_TYPE_UK1</name>
+        <identifier class="java.lang.String">bdd9c60b-55fe-4024-a46d-4ae9d370c5cb</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>CARRIAGE_TYPE</name>
+          <identifier class="java.lang.String">3e0d34c0-7b70-46f3-b066-833ead0ca3b3</identifier>
+          <schemaName>DBO</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>DBO</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">918ecf1e-9fa6-4010-a6dd-35681c732a6d</identifier>
+      </ID>
+      <name>TRAIN_COMPOSITION_TRAIN_FK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>TRAIN_CODE</name>
+          <identifier class="java.lang.String">786b181b-1580-4cc5-aea2-3a21713a6bcf</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>TRAIN_COMPOSITION</name>
+            <identifier class="java.lang.String">a442aa8d-c839-4f00-a16b-4f0071ae814b</identifier>
+            <schemaName>DBO</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <deleteMode>0</deleteMode>
+      <enabled>true</enabled>
+      <referenceID class="oracle.javatools.db.IdentifierBasedID">
+        <name>TRAIN_PK</name>
+        <identifier class="java.lang.String">766d9e8a-9773-49a1-b883-292d2782ab0c</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>TRAIN</name>
+          <identifier class="java.lang.String">519eaa73-62d5-416f-a75c-52ae1641d0a3</identifier>
+          <schemaName>DBO</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>DBO</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+    <constraint class="oracle.javatools.db.PKConstraint">
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">3c7b97d4-7575-41fa-9a3c-3827b343e2ab</identifier>
+      </ID>
+      <name>TRAIN_COMPOSITION_PK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>CARRIAGE_NUMBER</name>
+          <identifier class="java.lang.String">e8bd3f9b-85af-468d-bdd2-b8f7f5741e56</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>TRAIN_COMPOSITION</name>
+            <identifier class="java.lang.String">a442aa8d-c839-4f00-a16b-4f0071ae814b</identifier>
+            <schemaName>DBO</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <type>COLUMN</type>
+        </columnID>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>TRAIN_CODE</name>
+          <identifier class="java.lang.String">786b181b-1580-4cc5-aea2-3a21713a6bcf</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>TRAIN_COMPOSITION</name>
+            <identifier class="java.lang.String">a442aa8d-c839-4f00-a16b-4f0071ae814b</identifier>
+            <schemaName>DBO</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.IdentifierBasedID">
+        <name>TRAIN_COMPOSITION_PK</name>
+        <identifier class="java.lang.String">4ff8e441-1094-4a35-8d9b-76fd059565c4</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>TRAIN_COMPOSITION</name>
+          <identifier class="java.lang.String">a442aa8d-c839-4f00-a16b-4f0071ae814b</identifier>
+          <schemaName>DBO</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>DBO</schemaName>
+        <type>INDEX</type>
+      </indexID>
+    </constraint>
+    <constraint class="oracle.javatools.db.UniqueConstraint">
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">f1f72779-d34b-4e73-bf69-ad7ba70e60b6</identifier>
+      </ID>
+      <name>TRAIN_COMPOSITION_UK1</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>CODE</name>
+          <identifier class="java.lang.String">90a8486d-86df-4657-87a7-ce78df501dae</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>TRAIN_COMPOSITION</name>
+            <identifier class="java.lang.String">a442aa8d-c839-4f00-a16b-4f0071ae814b</identifier>
+            <schemaName>DBO</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.IdentifierBasedID">
+        <name>TRAIN_COMPOSITION_UK1</name>
+        <identifier class="java.lang.String">7b064d6b-6cae-45b2-9a9e-816afd49ba8a</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>TRAIN_COMPOSITION</name>
+          <identifier class="java.lang.String">a442aa8d-c839-4f00-a16b-4f0071ae814b</identifier>
+          <schemaName>DBO</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>DBO</schemaName>
+        <type>INDEX</type>
+      </indexID>
+    </constraint>
+  </constraints>
+  <indexes>
+    <indexe>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">4ff8e441-1094-4a35-8d9b-76fd059565c4</identifier>
+      </ID>
+      <name>TRAIN_COMPOSITION_PK</name>
+      <columnExpressions>
+        <columnExpression>
+          <ID class="oracle.javatools.db.IdentifierBasedID">
+            <identifier class="java.lang.String">14701dc8-bb58-4528-92d5-c6bf39fb5852</identifier>
+          </ID>
+          <expression class="oracle.javatools.db.sql.ColumnUsage">
+            <ID class="oracle.javatools.db.IdentifierBasedID">
+              <identifier class="java.lang.String">57e8602d-a7af-45d5-ab7f-e87edff6f41b</identifier>
+            </ID>
+            <objectID class="oracle.javatools.db.IdentifierBasedID">
+              <name>CARRIAGE_NUMBER</name>
+              <identifier class="java.lang.String">e8bd3f9b-85af-468d-bdd2-b8f7f5741e56</identifier>
+              <parent class="oracle.javatools.db.IdentifierBasedID">
+                <name>TRAIN_COMPOSITION</name>
+                <identifier class="java.lang.String">a442aa8d-c839-4f00-a16b-4f0071ae814b</identifier>
+                <schemaName>DBO</schemaName>
+                <type>TABLE</type>
+              </parent>
+              <type>COLUMN</type>
+            </objectID>
+            <outerJoin>false</outerJoin>
+            <qualified>true</qualified>
+          </expression>
+          <order>ASC</order>
+        </columnExpression>
+        <columnExpression>
+          <ID class="oracle.javatools.db.IdentifierBasedID">
+            <identifier class="java.lang.String">74a64b65-a5fd-4208-9a16-f8ac0be697b3</identifier>
+          </ID>
+          <expression class="oracle.javatools.db.sql.ColumnUsage">
+            <ID class="oracle.javatools.db.IdentifierBasedID">
+              <identifier class="java.lang.String">f6a41fd2-65dd-43b6-ada9-e00585062c0c</identifier>
+            </ID>
+            <objectID class="oracle.javatools.db.IdentifierBasedID">
+              <name>TRAIN_CODE</name>
+              <identifier class="java.lang.String">786b181b-1580-4cc5-aea2-3a21713a6bcf</identifier>
+              <parent class="oracle.javatools.db.IdentifierBasedID">
+                <name>TRAIN_COMPOSITION</name>
+                <identifier class="java.lang.String">a442aa8d-c839-4f00-a16b-4f0071ae814b</identifier>
+                <schemaName>DBO</schemaName>
+                <type>TABLE</type>
+              </parent>
+              <type>COLUMN</type>
+            </objectID>
+            <outerJoin>false</outerJoin>
+            <qualified>true</qualified>
+          </expression>
+          <order>ASC</order>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>UNIQUE</indexType>
+      <parallelDegree>1</parallelDegree>
+      <schema>
+        <name>DBO</name>
+      </schema>
+      <systemGenerated>true</systemGenerated>
+    </indexe>
+    <indexe>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">7b064d6b-6cae-45b2-9a9e-816afd49ba8a</identifier>
+      </ID>
+      <name>TRAIN_COMPOSITION_UK1</name>
+      <columnExpressions>
+        <columnExpression>
+          <ID class="oracle.javatools.db.IdentifierBasedID">
+            <identifier class="java.lang.String">3e2eb328-1a5b-4299-89b6-e4ef5dca5bef</identifier>
+          </ID>
+          <expression class="oracle.javatools.db.sql.ColumnUsage">
+            <ID class="oracle.javatools.db.IdentifierBasedID">
+              <identifier class="java.lang.String">d9b49cb7-a208-4b71-9c88-98eb3e73f03d</identifier>
+            </ID>
+            <objectID class="oracle.javatools.db.IdentifierBasedID">
+              <name>CODE</name>
+              <identifier class="java.lang.String">90a8486d-86df-4657-87a7-ce78df501dae</identifier>
+              <parent class="oracle.javatools.db.IdentifierBasedID">
+                <name>TRAIN_COMPOSITION</name>
+                <identifier class="java.lang.String">a442aa8d-c839-4f00-a16b-4f0071ae814b</identifier>
+                <schemaName>DBO</schemaName>
+                <type>TABLE</type>
+              </parent>
+              <type>COLUMN</type>
+            </objectID>
+            <outerJoin>false</outerJoin>
+            <qualified>true</qualified>
+          </expression>
+          <order>ASC</order>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>UNIQUE</indexType>
+      <parallelDegree>1</parallelDegree>
+      <schema>
+        <name>DBO</name>
+      </schema>
+      <systemGenerated>true</systemGenerated>
+    </indexe>
+  </indexes>
+  <properties>
+    <entry>
+      <key>TableType</key>
+      <value class="oracle.javatools.db.Table$TableType">NORMAL</value>
+    </entry>
+  </properties>
+  <schema>
+    <name>DBO</name>
+  </schema>
+</table>

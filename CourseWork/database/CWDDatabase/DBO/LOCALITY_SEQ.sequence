@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<sequence xmlns="http://xmlns.oracle.com/jdeveloper/1112/offlinedb">
+  <ID class="oracle.javatools.db.IdentifierBasedID">
+    <identifier class="java.lang.String">8f6c5c3c-7ea5-4067-9178-bc0cea469f2e</identifier>
+  </ID>
+  <name>LOCALITY_SEQ</name>
+  <cacheFlag>false</cacheFlag>
+  <cycleFlag>false</cycleFlag>
+  <incrementBy>1</incrementBy>
+  <orderFlag>false</orderFlag>
+  <schema>
+    <name>DBO</name>
+  </schema>
+  <startWith>1</startWith>
+</sequence>

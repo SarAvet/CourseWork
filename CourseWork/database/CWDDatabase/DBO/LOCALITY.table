@@ -1,0 +1,349 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<table xmlns="http://xmlns.oracle.com/jdeveloper/1112/offlinedb">
+  <ID class="oracle.javatools.db.IdentifierBasedID">
+    <identifier class="java.lang.String">3b490a62-10bc-4cc1-a458-c3290561fb40</identifier>
+  </ID>
+  <name>LOCALITY</name>
+  <columns>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">7c7fb64a-b6c6-4f20-ae4b-b8736dfd6156</identifier>
+      </ID>
+      <name>LOCALITY_CODE</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">2be5b1f1-e60c-4127-a4bb-467539697090</identifier>
+        </ID>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Код (телефонный) населенного пункта</value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">17bb577b-03d6-4b9b-b5db-18cf89779d49</identifier>
+      </ID>
+      <name>COUNTRY_CODE</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">e53af3d9-f07d-44a7-b9b4-e10b18fe140b</identifier>
+        </ID>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Код страны. Населенный пункт не может быть вне какой-то страны/государства</value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">f63e92c8-1ace-4f61-8d42-9d150c07b3cf</identifier>
+      </ID>
+      <name>NAME</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">48d856b8-3fd8-4043-931f-48074cbc256b</identifier>
+        </ID>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">120</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.Oracle9i</providerClass>
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Название населенного пункта. Населенный пункт не может быть без названия</value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">7181b62d-1306-459d-b40a-7dd5c6208823</identifier>
+      </ID>
+      <name>ID</name>
+      <dataTypeUsage>
+        <ID class="oracle.javatools.db.IdentifierBasedID">
+          <identifier class="java.lang.String">7eb7e1b5-4b30-462b-bfd0-df1101a3af61</identifier>
+        </ID>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <providerClass>oracle.javatools.db.ora.OracleDatabaseImpl</providerClass>
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>AUTO_GENERATED_SEQUENCE</key>
+          <value class="oracle.javatools.db.IdentifierBasedID">
+            <name>LOCALITY_SEQ</name>
+            <identifier class="java.lang.String">8f6c5c3c-7ea5-4067-9178-bc0cea469f2e</identifier>
+            <schemaName>DBO</schemaName>
+            <type>SEQUENCE</type>
+          </value>
+        </entry>
+        <entry>
+          <key>AUTO_GENERATED_SEQUENCE_TRIGGER</key>
+          <value class="oracle.javatools.db.NameBasedID">
+            <name>LOCALITY_TRG</name>
+            <schemaName>DBO</schemaName>
+            <type>TRIGGER</type>
+          </value>
+        </entry>
+        <entry>
+          <key>ColumnSequenceExpander.ReuseSequence</key>
+          <value class="java.lang.Boolean">false</value>
+        </entry>
+        <entry>
+          <key>ColumnSequenceExpander.TriggerNullCheck</key>
+          <value class="java.lang.Boolean">true</value>
+        </entry>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Идентификатор города</value>
+        </entry>
+      </properties>
+    </column>
+  </columns>
+  <constraints>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">6ebe0b3d-acbc-483f-a262-42dd77c4976c</identifier>
+      </ID>
+      <name>LOCALITY_COUNTRY_FK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>COUNTRY_CODE</name>
+          <identifier class="java.lang.String">17bb577b-03d6-4b9b-b5db-18cf89779d49</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>LOCALITY</name>
+            <identifier class="java.lang.String">3b490a62-10bc-4cc1-a458-c3290561fb40</identifier>
+            <schemaName>DBO</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <deleteMode>0</deleteMode>
+      <enabled>true</enabled>
+      <referenceID class="oracle.javatools.db.IdentifierBasedID">
+        <name>COUNTRY_PK</name>
+        <identifier class="java.lang.String">5cb21d6e-4195-4ee1-a4a6-ed76e332a4a6</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>COUNTRY</name>
+          <identifier class="java.lang.String">189165dd-4ba3-42eb-aecb-7086f3af9080</identifier>
+          <schemaName>DBO</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>DBO</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+    <constraint class="oracle.javatools.db.PKConstraint">
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">74c90373-8d0c-425a-9b53-dcc6f13f02f4</identifier>
+      </ID>
+      <name>LOCALITY_PK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>LOCALITY_CODE</name>
+          <identifier class="java.lang.String">7c7fb64a-b6c6-4f20-ae4b-b8736dfd6156</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>LOCALITY</name>
+            <identifier class="java.lang.String">3b490a62-10bc-4cc1-a458-c3290561fb40</identifier>
+            <schemaName>DBO</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <type>COLUMN</type>
+        </columnID>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>COUNTRY_CODE</name>
+          <identifier class="java.lang.String">17bb577b-03d6-4b9b-b5db-18cf89779d49</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>LOCALITY</name>
+            <identifier class="java.lang.String">3b490a62-10bc-4cc1-a458-c3290561fb40</identifier>
+            <schemaName>DBO</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.IdentifierBasedID">
+        <name>LOCALITY_PK</name>
+        <identifier class="java.lang.String">656a8520-eeea-4446-a60c-2e9fd198a481</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>LOCALITY</name>
+          <identifier class="java.lang.String">3b490a62-10bc-4cc1-a458-c3290561fb40</identifier>
+          <schemaName>DBO</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>DBO</schemaName>
+        <type>INDEX</type>
+      </indexID>
+    </constraint>
+    <constraint class="oracle.javatools.db.UniqueConstraint">
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">b2c7205e-7031-439e-8805-7586d163fc5f</identifier>
+      </ID>
+      <name>LOCALITY_UK1</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.IdentifierBasedID">
+          <name>ID</name>
+          <identifier class="java.lang.String">7181b62d-1306-459d-b40a-7dd5c6208823</identifier>
+          <parent class="oracle.javatools.db.IdentifierBasedID">
+            <name>LOCALITY</name>
+            <identifier class="java.lang.String">3b490a62-10bc-4cc1-a458-c3290561fb40</identifier>
+            <schemaName>DBO</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.IdentifierBasedID">
+        <name>LOCALITY_UK1</name>
+        <identifier class="java.lang.String">dc69e6b3-30cd-4a1e-9772-6e9ac6f874d1</identifier>
+        <parent class="oracle.javatools.db.IdentifierBasedID">
+          <name>LOCALITY</name>
+          <identifier class="java.lang.String">3b490a62-10bc-4cc1-a458-c3290561fb40</identifier>
+          <schemaName>DBO</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>DBO</schemaName>
+        <type>INDEX</type>
+      </indexID>
+    </constraint>
+  </constraints>
+  <indexes>
+    <indexe>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">656a8520-eeea-4446-a60c-2e9fd198a481</identifier>
+      </ID>
+      <name>LOCALITY_PK</name>
+      <columnExpressions>
+        <columnExpression>
+          <ID class="oracle.javatools.db.IdentifierBasedID">
+            <identifier class="java.lang.String">70a6a590-5bdc-49d3-98cf-9a33215ee2f2</identifier>
+          </ID>
+          <expression class="oracle.javatools.db.sql.ColumnUsage">
+            <ID class="oracle.javatools.db.IdentifierBasedID">
+              <identifier class="java.lang.String">dd51296d-8015-4796-ad45-9720d094e27c</identifier>
+            </ID>
+            <objectID class="oracle.javatools.db.IdentifierBasedID">
+              <name>LOCALITY_CODE</name>
+              <identifier class="java.lang.String">7c7fb64a-b6c6-4f20-ae4b-b8736dfd6156</identifier>
+              <parent class="oracle.javatools.db.IdentifierBasedID">
+                <name>LOCALITY</name>
+                <identifier class="java.lang.String">3b490a62-10bc-4cc1-a458-c3290561fb40</identifier>
+                <schemaName>DBO</schemaName>
+                <type>TABLE</type>
+              </parent>
+              <type>COLUMN</type>
+            </objectID>
+            <outerJoin>false</outerJoin>
+            <qualified>true</qualified>
+          </expression>
+          <order>ASC</order>
+        </columnExpression>
+        <columnExpression>
+          <ID class="oracle.javatools.db.IdentifierBasedID">
+            <identifier class="java.lang.String">81e141ed-89d2-4d59-a77f-222f0e273b49</identifier>
+          </ID>
+          <expression class="oracle.javatools.db.sql.ColumnUsage">
+            <ID class="oracle.javatools.db.IdentifierBasedID">
+              <identifier class="java.lang.String">81e3f963-4f60-470f-a735-2b09bc100d5d</identifier>
+            </ID>
+            <objectID class="oracle.javatools.db.IdentifierBasedID">
+              <name>COUNTRY_CODE</name>
+              <identifier class="java.lang.String">17bb577b-03d6-4b9b-b5db-18cf89779d49</identifier>
+              <parent class="oracle.javatools.db.IdentifierBasedID">
+                <name>LOCALITY</name>
+                <identifier class="java.lang.String">3b490a62-10bc-4cc1-a458-c3290561fb40</identifier>
+                <schemaName>DBO</schemaName>
+                <type>TABLE</type>
+              </parent>
+              <type>COLUMN</type>
+            </objectID>
+            <outerJoin>false</outerJoin>
+            <qualified>true</qualified>
+          </expression>
+          <order>ASC</order>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>UNIQUE</indexType>
+      <parallelDegree>1</parallelDegree>
+      <schema>
+        <name>DBO</name>
+      </schema>
+      <systemGenerated>true</systemGenerated>
+    </indexe>
+    <indexe>
+      <ID class="oracle.javatools.db.IdentifierBasedID">
+        <identifier class="java.lang.String">dc69e6b3-30cd-4a1e-9772-6e9ac6f874d1</identifier>
+      </ID>
+      <name>LOCALITY_UK1</name>
+      <columnExpressions>
+        <columnExpression>
+          <ID class="oracle.javatools.db.IdentifierBasedID">
+            <identifier class="java.lang.String">de8cb4b3-99e8-4e9c-8b30-077cf79eadc1</identifier>
+          </ID>
+          <expression class="oracle.javatools.db.sql.ColumnUsage">
+            <ID class="oracle.javatools.db.IdentifierBasedID">
+              <identifier class="java.lang.String">d8697643-05e0-41b3-892f-76c4938b5bd1</identifier>
+            </ID>
+            <objectID class="oracle.javatools.db.IdentifierBasedID">
+              <name>ID</name>
+              <identifier class="java.lang.String">7181b62d-1306-459d-b40a-7dd5c6208823</identifier>
+              <parent class="oracle.javatools.db.IdentifierBasedID">
+                <name>LOCALITY</name>
+                <identifier class="java.lang.String">3b490a62-10bc-4cc1-a458-c3290561fb40</identifier>
+                <schemaName>DBO</schemaName>
+                <type>TABLE</type>
+              </parent>
+              <type>COLUMN</type>
+            </objectID>
+            <outerJoin>false</outerJoin>
+            <qualified>true</qualified>
+          </expression>
+          <order>ASC</order>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>UNIQUE</indexType>
+      <parallelDegree>1</parallelDegree>
+      <schema>
+        <name>DBO</name>
+      </schema>
+      <systemGenerated>true</systemGenerated>
+    </indexe>
+  </indexes>
+  <properties>
+    <entry>
+      <key>TableType</key>
+      <value class="oracle.javatools.db.Table$TableType">NORMAL</value>
+    </entry>
+  </properties>
+  <schema>
+    <name>DBO</name>
+  </schema>
+</table>
